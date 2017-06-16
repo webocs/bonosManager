@@ -1,0 +1,22 @@
+{
+  "name": "Compra",
+  "plural": "Compras",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "horaLimite": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

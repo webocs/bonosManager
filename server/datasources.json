@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDs": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "test",
+    "password": "changeMe",
+    "name": "mongoDs",
+    "user": "loopback2",
+    "connector": "mongodb"
+  }
+}
