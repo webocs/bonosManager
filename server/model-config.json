@@ -19,11 +19,11 @@
   "AccessToken": {
     "dataSource": "db",
     "public": false,
-    "relations":{
-      "user":{
-        "type":"belongsTo",
-        "model":"usuario",
-        "foreignKey":"userId"
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Usuario",
+        "foreignKey": "userId"
       }
     }
   },
@@ -48,9 +48,13 @@
   },
   "Menu": {
     "dataSource": "mongoDs",
-    "public": false
+    "public": true
   },
   "Usuario": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "Suscripcion": {
     "dataSource": "mongoDs",
     "public": true
   }

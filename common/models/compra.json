@@ -16,7 +16,36 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "Comprador": {
+      "type": "hasOne",
+      "model": "Usuario",
+      "foreignKey": ""
+    },
+    "menues": {
+      "type": "hasMany",
+      "model": "Menu",
+      "foreignKey": "menuesId"
+    },
+    "suscripciones": {
+      "type": "hasMany",
+      "model": "Suscripcion",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

@@ -1,18 +1,29 @@
 {
-  "name": "Menu",
+  "name": "Suscripcion",
+  "plural": "suscripciones",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "nombre": {
-      "type": "string",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
+    "comensal": {
+      "type": "hasOne",
+      "model": "Usuario",
+      "foreignKey": "usuarioId"
+    },
+    "menuElegido": {
+      "type": "hasOne",
+      "model": "Menu",
+      "foreignKey": "menuId"
+    },
+    "esDeCompra": {
+      "type": "belongsTo",
+      "model": "Compra",
+      "foreignKey": ""
+    }
   },
   "acls": [
     {

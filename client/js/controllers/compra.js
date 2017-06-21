@@ -13,6 +13,7 @@ angular
         .find()
         .$promise
         .then(function(results) {
+          console.log(results);
           $scope.compras = results;
         });
     }
