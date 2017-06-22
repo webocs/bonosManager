@@ -72,9 +72,9 @@ module.exports = function(app) {
   }
 
 
-  function createSuscripciones(usuarios, menues, compras, cb) {
+  function createSuscripciones(usuarios, menuesCreados, compras, cb) {
 
-    app.models.Compra.updateAll({id:compras[0].id},{Compador:usuarios[0].id},function(err,info)
+    app.models.Compra.updateAll({id:compras[0].id},{Compador:usuarios[0].id,menues:menuesCreados},function(err,info)
     {
 
     });  
@@ -85,19 +85,19 @@ module.exports = function(app) {
 
       Suscripcion.create([{
         usuarioId:usuarios[0].id,      
-        menuId: menues[0].id,
+        menuId: menuesCreados[0].id,
         esDeCompra: compras[0].id,
       }, {
         usuarioId:usuarios[1].id,      
-        menuId: menues[0].id,
+        menuId: menuesCreados[0].id,
         esDeCompra: compras[0].id,
       }, {
         usuarioId:usuarios[2].id,      
-        menuId: menues[0].id,
+        menuId: menuesCreados[0].id,
         esDeCompra: compras[0].id,
       }, {
         usuarioId:usuarios[3].id,      
-        menuId: menues[0].id,
+        menuId: menuesCreados[0].id,
         esDeCompra: compras[0].id,
       }], cb);
     });
